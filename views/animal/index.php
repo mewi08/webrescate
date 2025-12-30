@@ -68,7 +68,7 @@
                             <td>${animal.lugar}</td>
                             <td>${animal.observaciones}</td>
                             <td>
-                                <a href='./actualizar.php' class='btn btn-sm btn-outline-info'>Editar</a>
+                                <a href='./edicion.php?id=${animal.idanimal}' class='btn btn-sm btn-outline-info'>Editar</a>
                                 <a href='#'data-id='${animal.idanimal}' class='btn btn-sm btn-outline-danger'>Eliminar</a>
                             </td>
                         </tr>`
