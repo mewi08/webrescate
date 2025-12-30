@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellas Solidarias</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Quicksand (Redonda y amable) -->
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/estilos.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="container">
+        <header class="header-kindy d-flex justify-content-between align-items-center">
+            <a href="#" class="fw-bold fs-4 text-decoration-none" style="color: var(--kindy-accent);">Huellas Solidarias 🐾</a>
+            <nav class="d-none d-md-flex gap-4">
+                <a href="#" class="text-muted text-decoration-none fw-semibold">Galería</a>
+                <a href="#" class="text-muted text-decoration-none fw-semibold">Blog</a>
+                <a href="#" class="text-muted text-decoration-none fw-semibold">Colaboradores</a>
+            </nav>
+            <a href="#" class="btn btn-outline-secondary rounded-pill px-4 fw-bold border-2">Donaciones</a>
+        </header>
+    </div>
+
+    <main class="container mt-5">
+        
+        <!-- SECCIÓN 1: BIENVENIDA (FLEX REVERSO) -->
+        <section class="capsule-section">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 pe-lg-5">
+                    <h1 class="display-4 fw-bold mb-4">Dales un hogar y encuentra a tu <span style="color: var(--kindy-accent);">compañero fiel</span></h1>
+                    <p class="fs-5 mb-4 opacity-75">En Huellas Solidarias creemos que cada animal merece una segunda oportunidad. Descubre a quienes esperan un hogar lleno de cariño y una familia que los acompañe toda la vida.</p>
+
+                    <a href="./views/animal/index.php" class="btn-kindy d-inline-block text-center">Conocer mascotas</a>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./public//images/cachorro.jpg" alt="Amigo" class="img-rounded shadow-sm">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: BLOG / ARTÍCULOS (DISEÑO LIMPIO) -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="blog-card">
+                    <h4 class="fw-bold">Guía de cuidados</h4>
+                    <p>Todo lo que necesitas saber para recibir a tu nuevo integrante con amor y paciencia.</p>
+                    <a href="#" class="fw-bold text-dark text-decoration-none">Leer más →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-card" style="background-color: var(--kindy-color);">
+                    <h4 class="fw-bold">Alimentación</h4>
+                    <p>Descubre cuáles son los mejores alimentos naturales para mantener su cola siempre feliz.</p>
+                    <a href="#" class="fw-bold text-dark text-decoration-none">Leer más →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-card" style="background-color: #e0e7ff;">
+                    <h4 class="fw-bold">Salud Mental</h4>
+                    <p>El juego es vital. Aprende rutinas de ejercicios para perros que viven en departamentos.</p>
+                    <a href="#" class="fw-bold text-dark text-decoration-none">Leer más →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: CONCIENCIA (DISEÑO CENTRADO) -->
+        <section class="capsule-section text-center" style="background-color: #e9e9e9; border: none;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-4">No los dejes solos</h2>
+                    <p class="fs-5 mb-4">El abandono es una realidad triste, pero juntos podemos cambiarla. Si ves a un peludo en problemas, avísanos. Cada reporte cuenta.</p>
+                    
+                    <button class="btn btn-dark rounded-pill px-5 py-3 fw-bold">Reportar ahora</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER REDONDEADO -->
+    <footer class="footer-kindy shadow-sm">
+        <div class="container text-center">
+            <div class="row g-4 justify-content-between text-md-start">
+                <div class="col-md-4">
+                    <h3 class="fw-bold" style="color: var(--kindy-accent);">Huellas Solidarias.</h3>
+                    <p class="opacity-75">Cuidamos cada huella, unimos cada corazón. Proyecto 2025.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold">Comunidad</h6>
+                    <ul class="list-unstyled opacity-75">
+                        <li>Adopciones</li>
+                        <li>Donaciones</li>
+                        <li>Historias</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold">Social</h6>
+                    <ul class="list-unstyled opacity-75">
+                        <li>Instagram</li>
+                        <li>TikTok</li>
+                    <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <p class="mb-0 small opacity-50">&copy; 2025 Huellas Solidarias — Chincha Baja.</p>
+        </div>
+    </footer>
+
+    <script src="cdn.jsdelivr.net"></script>
+</body>
+</html>
