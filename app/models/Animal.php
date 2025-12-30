@@ -90,7 +90,7 @@ class Animal extends Conexion{
                 condicion = ?,
                 fecharescate = ?,
                 lugar = ?,
-                observaciones = ?;
+                observaciones = ?,
                 foto = ?,
                 activo = 1,
                 updated = now()
