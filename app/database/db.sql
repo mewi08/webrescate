@@ -18,7 +18,7 @@ CREATE TABLE animales(
     idanimal        INT AUTO_INCREMENT PRIMARY KEY,
     idpersona       INT NOT NULL,
     nombre          VARCHAR(40) NULL, 
-    especie         VARCHAR(30) NOT NULL,
+    especie         ENUM('Perro','Gato','Ave','Conejo','Otro') NOT NULL,
     sexo            ENUM("M","F") NOT NULL,
     condicion       ENUM("Rescatado","Tratamiento","Adopcion","Adoptado") NOT NULL DEFAULT "Rescatado",
     fecharescate    DATE NOT NULL,

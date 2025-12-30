@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-            <h3>Registro de animales rescatados</h3>
+    <div class="container mt-3">
+        <h3>Registro de animales rescatados</h3>
+        <a href="./index.php" class="btn btn-outline-success">Listar</a>
+        <hr>
         <form action="" id="formulario-animal">
             <div class="card">
                 <div class="card-header">Formulario</div>
@@ -57,7 +59,14 @@
                         </div>
                         <div class="col-md-6">
                              <div class="form-floating mb-2">
-                                <input type="text" name="" id="especie" class="form-control" required>
+                               <select name="" id="especie" class="form-select" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Perro">Perro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Ave">Ave</option>
+                                    <option value="Conejo">Conejo</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
                                 <label for="especie"class="form-label">Especie</label>
                             </div>
                         </div>

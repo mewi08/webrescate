@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-            <h3>Edición de animales rescatados</h3>
+    <div class="container mt-3">
+        <h3>Edición de animales rescatados</h3>
+        <a href="./index.php" class="btn btn-outline-success">Listar</a>
+        <hr>
         <form action="" id="formulario-editar">
             <div class="card">
                 <div class="card-header">Formulario</div>
@@ -99,7 +101,7 @@
                     
                 </div>
                 <div class="card-footer text-end">
-                    <button class="btn btn-primary" type="submit">Guardar</button>
+                    <button class="btn btn-primary" type="submit">Actualizar</button>
                     <button class="btn btn-outline-secondary" type="reset">Cancelar</button>
                 </div>
             </div>
@@ -109,7 +111,8 @@
     <script>
         document.addEventListener("DOMContentLoaded",function(){
            let parametro = new URLSearchParams (location.search)
-           let id = parametro.get("id")
+           let id = parametro.get('id')
+
            function buscarRegistro(idbuscado){
             const datos = new FormData()
             datos.append("operacion","buscarPorId")
@@ -137,6 +140,47 @@
             })
             
            }
+
+           document.querySelector("#formulario-editar").addEventListener("submit",function(event){
+            event.preventDefault()
+
+            if(confirm("¿Está seguro de actualizar el registro?")){
+                actualizarRegistro()
+            }
+           })
+
+           function actualizarRegistro(){
+                const datos = new FormData()
+                datos.append("operacion","actualizar")
+                datos.append("idpersona",document.querySelector("#rescatistas").value)
+                datos.append("nombre", document.querySelector("#nombre").value )
+                datos.append("especie", document.querySelector("#especie").value )
+                datos.append("sexo", document.querySelector("#sexo").value )
+                datos.append("condicion", document.querySelector("#condicion").value )
+                datos.append("fecharescate", document.querySelector("#fecharescate").value )
+                datos.append("lugar", document.querySelector("#lugar").value )
+                datos.append("observaciones", document.querySelector("#observaciones").value )
+                datos.append("foto", document.querySelector("#foto").value)
+                datos.append("idanimal",id)
+                fetch('../../app/controllers/animal.controller.php',{
+                    method:'POST',
+                    body: datos
+                })
+
+                .then(response => response.json())
+                .then(data=>{
+                    if(data.filas>0){
+                        document.querySelector("#formulario-editar").reset()
+                     alert("Se guardo correctamente...")
+                    }else{
+                        alert("No se pudo concretar el proceso")
+                    }
+                })
+                .catch(e=>{
+                    console.error(e)
+                })
+           }
+
            buscarRegistro(id)
         })
     </script>

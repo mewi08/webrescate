@@ -37,6 +37,7 @@ if(isset($_POST['operacion'])){
                 'lugar'         => $_POST['lugar'],
                 'observaciones' => $_POST['observaciones'],
                 'foto'          => $_POST['foto'],
+                'idanimal'=> $_POST['idanimal'],
             ];
             $filasafectadas = $animal->actualizar($registro);
             echo json_encode(['filas'=> $filasafectadas]);
