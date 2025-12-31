@@ -94,17 +94,11 @@
                         <label for="observaciones" class="form-label">Observaciones</label>
                     </div>
 
-                    <!-- .row -->
-                    <div class="row g-2 ">   
-                        <div class="col-md-2">
-                            <div class="form-floating mb-2">
-                            <label for="" class="form-label">Foto</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                    <div class="form-floating mb-2">
+                                 <label for="" class="form-label">Foto</label>
                             <input type="text" name="" id="foto" class="form-control" required>
-                        </div>
-                    </div>
+                            </div>
+                    
                     
                 </div>
                 <div class="card-footer text-end">

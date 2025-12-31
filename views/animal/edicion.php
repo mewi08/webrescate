@@ -93,20 +93,16 @@
                         <input type="text" name="" id="observaciones" class="form-control" required>
                         <label for="observaciones" class="form-label">Observaciones</label>
                     </div>
-
-                    <!-- .row -->
-                    <div class="row g-2 ">   
-                        <div class="col-md-2">
-                            <div class="form-floating mb-2">
-                            <label for="" class="form-label">Foto</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="" id="foto" class="form-control" required>
-                        </div>
-                    </div>
                     
+                    <div class="form-floating mb-2">
+                        <input type="text" name="" id="foto" class="form-control" required>
+                        <label for="" class="form-label">Foto</label>
+                    </div>
+                           
+                       
                 </div>
+                    
+            </div>
                 <div class="card-footer text-end">
                     <button class="btn btn-primary" type="submit">Actualizar</button>
                     <button class="btn btn-outline-secondary" type="reset">Cancelar</button>
