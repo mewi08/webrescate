@@ -63,7 +63,7 @@
                                 <td>${persona.telefono}</td>    
                                 <td>${persona.email}</td> 
                                 <td>
-                                    <a href='./edicion.php?id=${persona.idpersona}' class='btn btn-sm btn-outline-info'>Editar</a>
+                                    <a href='./editar.php?id=${persona.idpersona}' class='btn btn-sm btn-outline-info'>Editar</a>
                                     <a href='#'data-id='${persona.idpersona}' class='btn btn-sm btn-outline-danger'>Eliminar</a>
                                 </td>   
                             </tr>`

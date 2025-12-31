@@ -2,6 +2,9 @@
 require_once '../models/Persona.php';
 $persona = new Persona();
 
+header("Content-Type: application/json; charset=utf-8");
+
+if(isset($_POST['operacion'])){
   switch($_POST['operacion']){
     case 'listar':
       $registros = $persona->listar();
@@ -27,7 +30,7 @@ $persona = new Persona();
         'apellidos'  => $_POST['apellidos'],
         'telefono'   => $_POST['telefono'],
         'email'      => $_POST['email'],
-        'idpersona'  => $_POST['idpersona']
+        'idpersona'  => $_POST['idpersona'],
       ];
       $filasafectadas = $persona->actualizar($registro);
       echo json_encode(['filas'=> $filasafectadas]);
@@ -47,3 +50,4 @@ $persona = new Persona();
         break;
   }
 
+}

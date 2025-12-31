@@ -40,7 +40,7 @@ class Persona extends Conexion{
                     $registro ['nombres'],
                     $registro ['apellidos'],
                     $registro ['telefono'],
-                    $registro ['email']
+                    $registro ['email'],
                 )
             );
             return $this->conexion->lastInsertId();
