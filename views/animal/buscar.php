@@ -18,7 +18,7 @@
         <h3>Búsqueda de animales rescatados</h3>
         <a href="./index.php" class="btn btn-outline-success">Listar</a>
         <hr>
-        
+        <!-- BÚSQUEDA POR ID -->
         <h5>Búsqueda por ID</h5>
         <form action="" id="form-busqueda-id">
             <div class="mb-3">
@@ -36,8 +36,8 @@
         <hr>
 
 
-                <!-- BÚSQUEDA POR CONDICIÓN -->
-         <h5>Búsqueda por Condición</h5>
+        <!-- BÚSQUEDA POR CONDICIÓN -->
+        <h5>Búsqueda por Condición</h5>
         <form action="" id="form-busqueda-condicion">
             <div class="input-group mb-3">
                 <select id="condicion" class="form-select">
@@ -55,10 +55,32 @@
             </div>
         </form>
         <hr>
+
+        <!-- BÚSQUEDA POR ESPECIE -->
+        <h5>Búsqueda por Especie</h5>
+        <form action="" id="form-busqueda-especie">
+            <div class="input-group mb-3">
+                <select id="especie" class="form-select">
+                    <option value="">Selecciona</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Ave">Ave</option>
+                    <option value="Conejo">Conejo</option>
+                    <option value="Otro">Otro</option>
+                   </select>
+                <button class="btn btn-success" type="submit"><i class="bi bi-search"></i> Buscar</button>
+            </div>
+
+            <div class="row" id="animales-especie">     
+            <!-- Card -->
+            </div>
+        </form>
+
     </div>
     <!-- Funciones de javascript -->
     <script src="../../public/js/animal/renderizar-card.js"></script>
     <script src="../../public//js/animal/buscar-id.js"></script>
     <script src="../../public/js/animal/buscar-condicion.js"></script>
+    <script src="../../public/js//animal/buscar-especie.js"></script>
 </body>
 </html>

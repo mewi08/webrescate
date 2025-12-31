@@ -140,4 +140,14 @@ class Animal extends Conexion{
         }
     }
 
+    public function buscarPorEspecie($especie){
+        try{
+            $sql= "SELECT * FROM animales WHERE especie=? AND activo=1";
+            $consulta= $this->conexion->prepare($sql);
+            $consulta->execute(array($especie));
+            return $consulta->fetchAll(PDO::FETCH_ASSOC);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
 }

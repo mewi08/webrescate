@@ -1,4 +1,4 @@
-// public/js/animales/buscar-id.js
+
 document.addEventListener("DOMContentLoaded", () => {
 
     function buscarPorId() {

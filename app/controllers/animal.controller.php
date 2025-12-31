@@ -9,7 +9,7 @@ if(isset($_POST['operacion'])){
         case 'listar':
             $registros = $animal->listar();
             echo json_encode($registros);
-        break;
+            break;
         case 'registrar':
             $registro = [
                 'idpersona'     => $_POST['idpersona'],
@@ -24,7 +24,7 @@ if(isset($_POST['operacion'])){
             ];
             $idobtenido= $animal->agregar($registro);
             echo json_encode(["idanimal" => $idobtenido]);
-        break;  
+            break;  
 
         case 'actualizar':
             $registro = [
@@ -41,20 +41,24 @@ if(isset($_POST['operacion'])){
             ];
             $filasafectadas = $animal->actualizar($registro);
             echo json_encode(['filas'=> $filasafectadas]);
-        break;
+            break;
 
         case 'eliminar':
             $filasafectadas = $animal->eliminar($_POST['idanimal']);
             echo json_encode(["filas"=>$filasafectadas]); 
-        break;  
+            break;  
 
         case 'buscarPorId':
             echo json_encode($animal->buscarPorId($_POST['idanimal']));
-        break;  
+            break;  
 
         case 'buscarPorCondicion':
             echo json_encode($animal->buscarPorcondicion($_POST['condicion']));
-        break;
+            break;
+
+        case 'buscarPorEspecie':
+            echo json_encode($animal->buscarPorEspecie($_POST['especie']));
+            break;
     }
 
 }

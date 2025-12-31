@@ -1,10 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    function buscarPorCondicion() {
+    function buscarPorEspecie() {
         const datos = new FormData()
-        datos.append("operacion", "buscarPorCondicion")
-        datos.append("condicion", document.querySelector("#condicion").value)
+        datos.append("operacion", "buscarPorEspecie")
+        datos.append("especie", document.querySelector("#especie").value)
 
         fetch('../../app/controllers/animal.controller.php', {
             method: 'POST',
@@ -13,14 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             if (data) {
-                renderizarDatos(data, "#animales-condicion")
+                renderizarDatos(data, "#animales-especie")
             }
         })
         .catch(console.error)
     }
 
-    document.querySelector("#form-busqueda-condicion").addEventListener("submit", e => {
+    document.querySelector("#form-busqueda-especie").addEventListener("submit", e => {
             e.preventDefault()
-            buscarPorCondicion()
+            buscarPorEspecie()
     })
 })
