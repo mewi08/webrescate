@@ -11,6 +11,9 @@
 </head>
 <body>
     <div class="container mt-3">
+         <div>
+              <a href="./index.php" class="btn btn-sm btn-outline-success">Regresar</a>
+        </div>
         <h5>Búsqueda por ID</h5>
         <form action="" id="form-busqueda-id">
                 <label for="idbuscado">ID Buscado</label>
@@ -62,75 +65,7 @@
         </form>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded",function(){
-            function buscarPorId(){
-                const datos = new FormData()
-                datos.append("operacion","buscarPorId")
-                datos.append("idpersona",document.querySelector("#idbuscado").value)
-
-                fetch('../../app/controllers/persona.controller.php',{
-                    method:'POST',
-                    body:datos
-                })
-                    .then(response=>response.json())
-                    .then(data=>{
-                        const tabla = document.querySelector("#tabla-persona-id tbody")
-                        tabla.innerHTML=""
-                        data.forEach(element => {
-                            tabla.innerHTML+=`
-                            <tr>
-                                <td>${element.dni}</td>
-                                <td>${element.nombres}</td>
-                                <td>${element.apellidos}</td>
-                                <td>${element.telefono}</td>
-                                <td>${element.email}</td>
-                            </tr>`
-                        });
-                    })
-                    .catch(e=>{
-                        console.error(e)
-                    })
-            }
-
-             function buscarPorDni(){
-                const datos = new FormData()
-                datos.append("operacion","buscarPorDni")
-                datos.append("dni",document.querySelector("#dni").value)
-
-                fetch('../../app/controllers/persona.controller.php',{
-                    method:'POST',
-                    body:datos
-                })
-                    .then(response=>response.json())
-                    .then(data=>{
-                        const tabla = document.querySelector("#tabla-persona-dni tbody")
-                        tabla.innerHTML=""
-                        data.forEach(element => {
-                            tabla.innerHTML+=`
-                            <tr>
-                                <td>${element.nombres}</td>
-                                <td>${element.apellidos}</td>
-                                <td>${element.telefono}</td>
-                                <td>${element.email}</td>
-                            </tr>`
-                        });
-                    })
-                    .catch(e=>{
-                        console.error(e)
-                    })
-            }
-
-            document.querySelector("#form-busqueda-id").addEventListener("submit", function(event){
-                event.preventDefault()
-                buscarPorId()
-            })
-
-            document.querySelector("#form-busqueda-dni").addEventListener("submit", function(event){
-                event.preventDefault()
-                buscarPorDni()
-            })
-        })
-    </script>
+    <script src="../../public//js/persona/buscar-id.js" ></script>
+    <script src="../../public//js/persona/buscar-dni.js" ></script>
 </body>
 </html>
