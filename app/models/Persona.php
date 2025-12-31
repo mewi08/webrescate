@@ -115,7 +115,7 @@ class Persona extends Conexion{
             $consulta = $this->conexion->prepare($sql);
             
             $consulta->execute(
-                array("%$dni%")                
+                array("$dni%")                
             );
 
             return $consulta->fetchAll(PDO::FETCH_ASSOC);
