@@ -41,7 +41,7 @@ if(isset($_POST['operacion'])){
       echo json_encode(['filas'=> $filasafectadas]);
       break; 
 
-    case 'buscarPorID':
+    case 'buscarPorId':
         echo json_encode($persona->buscarPorId($_POST['idpersona']));
         break;
         
