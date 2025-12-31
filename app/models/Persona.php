@@ -14,6 +14,7 @@ class Persona extends Conexion{
             $sql = "
             SELECT idpersona, dni, nombres, apellidos,telefono,email 
             FROM personas
+            WHERE activo='1'
             ORDER BY idpersona DESC";
 
             $consulta = $this->conexion->prepare($sql);
@@ -42,7 +43,7 @@ class Persona extends Conexion{
                     $registro ['email']
                 )
             );
-            return $consulta->rowCount();
+            return $this->conexion->lastInsertId();
         }catch(Exception $e){
             return -1;
         }

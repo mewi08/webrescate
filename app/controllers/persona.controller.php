@@ -27,7 +27,7 @@ $persona = new Persona();
         'apellidos'  => $_POST['apellidos'],
         'telefono'   => $_POST['telefono'],
         'email'      => $_POST['email'],
-        'idpersona'  => $_POST['idpesona']
+        'idpersona'  => $_POST['idpersona']
       ];
       $filasafectadas = $persona->actualizar($registro);
       echo json_encode(['filas'=> $filasafectadas]);
