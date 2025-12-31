@@ -55,75 +55,10 @@
             </div>
         </form>
         <hr>
-
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function(){
-                function buscarPorId(){
-                    const datos = new FormData()
-                    datos.append("operacion","buscarPorId")
-                    datos.append("idanimal", document.querySelector("#idbuscado").value)
-                    fetch('../../app/controllers/animal.controller.php',{
-                        method:'POST',
-                        body:datos
-                    })
-                        .then(response => response.json())
-                        .then(data=>{
-                            renderizarDatos(data,"#animales-id")
-                        })
-                        .catch(error=>{
-                            alert("No se encontro...")
-                        })
-                }
-
-                function buscarPorCondicion(){
-                    const datos = new FormData()
-                    datos.append("operacion","buscarPorCondicion")
-                    datos.append("condicion", document.querySelector("#condicion").value)
-
-                    fetch('../../app/controllers/animal.controller.php', {
-                        method:'POST',
-                        body: datos
-                    })
-                        .then(response=>response.json())
-                        .then(data=>{
-                            if(data){
-                            renderizarDatos(data,"#animales-condicion")
-                        }
-                        })
-                        .catch(e=>{
-                            console.error(e)
-                        })
-                }
-                
-                function renderizarDatos(listaAnimales,contenedor){
-                    const registro = document.querySelector(contenedor)
-                    registro.innerHTML=""
-                    listaAnimales.forEach(animal => {   
-                            registro.innerHTML+=`
-                            <div class="card" style="width: 16rem;">
-                                <img src="../../public/images/${animal.especie}.png" class="card-img-top img-fluid" alt="Fotografía de un ${animal.especie}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${animal.nombre ?? 'Sin nombre'}</h5>
-                                    <p class="card-text">Rescatada en ${animal.lugar} <br>el día ${animal.fecharescate} </p>
-                                    <a href="./detalle.html?id=${animal.idanimal}" class="btn btn-primary">Saber más... </a>
-                                </div>
-                            </div>`
-                             });
-                }
-
-
-                document.querySelector("#form-busqueda-id").addEventListener("submit",function(event){
-                    event.preventDefault()
-                    buscarPorId()
-                })
-
-                document.querySelector("#form-busqueda-condicion").addEventListener("submit",function(event){
-                    event.preventDefault()
-                    buscarPorCondicion()
-                })
-            })
-        </script>
     </div>
+    <!-- Funciones de javascript -->
+    <script src="../../public/js/animal/renderizar-card.js"></script>
+    <script src="../../public//js/animal/buscar-id.js"></script>
+    <script src="../../public/js/animal/buscar-condicion.js"></script>
 </body>
 </html>
