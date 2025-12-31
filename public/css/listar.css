@@ -1,0 +1,15 @@
+
+    .card{
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    #animales-condicion{
+        margin: 0px;
+    }
+
+    #animales-id{
+        margin: 0px;
+        justify-content:center;
+        display: flex;
+    }
