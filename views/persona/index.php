@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animales</title>
+    <title>Personas</title>
 
     <!-- Estilos de bootstrap -->
     <link rel="stylesheet" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
                         <th>Nombres</th>
                         <th>Apellidos</th>
                         <th>Teléfono</th>
-                        <th>email</th>
+                        <th>Email</th>
                         <th>Operaciones</th>
                     </tr>
                 </thead>
