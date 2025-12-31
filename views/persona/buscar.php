@@ -12,7 +12,7 @@
 <body>
     <div class="container mt-3">
          <div>
-              <a href="./index.php" class="btn btn-sm btn-outline-success">Regresar</a>
+              <a href="./index.php" class="btn btn-sm btn-outline-success">Listar</a>
         </div>
         <h5>Búsqueda por ID</h5>
         <form action="" id="form-busqueda-id">
